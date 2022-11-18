@@ -1,5 +1,5 @@
 import * as React from 'react';
-function App() {
+function Stats() {
   return (
     <div>
     <h1>HOME</h1>
@@ -7,4 +7,4 @@ function App() {
   );
 }
 
-export default App;
+export default Stats;

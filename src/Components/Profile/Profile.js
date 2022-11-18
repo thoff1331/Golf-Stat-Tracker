@@ -1,10 +1,10 @@
 import * as React from 'react';
-function App() {
+function Profile() {
   return (
     <div>
-    <h1>HOME</h1>
+    <h1>Profile</h1>
     </div>
   );
 }
 
-export default App;
+export default Profile;
