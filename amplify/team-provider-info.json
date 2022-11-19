@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyc1d7f59f57424-staging-50600-authRole",
+      "UnauthRoleArn": "arn:aws:iam::235672486968:role/amplify-amplifyc1d7f59f57424-staging-50600-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::235672486968:role/amplify-amplifyc1d7f59f57424-staging-50600-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-amplifyc1d7f59f57424-staging-50600-deployment",
+      "UnauthRoleName": "amplify-amplifyc1d7f59f57424-staging-50600-unauthRole",
+      "StackName": "amplify-amplifyc1d7f59f57424-staging-50600",
+      "StackId": "arn:aws:cloudformation:us-west-2:235672486968:stack/amplify-amplifyc1d7f59f57424-staging-50600/dc4b5230-67c7-11ed-86d3-0aa4a628a22f",
+      "AmplifyAppId": "d15wx30wurrxbk"
+    },
+    "categories": {
+      "auth": {
+        "golfstattracker998db995": {}
+      }
+    }
+  }
+}

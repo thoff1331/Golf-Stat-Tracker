@@ -8,6 +8,9 @@ import Score from './Components/Score/Score'
 import Profile from './Components/Profile/Profile';
 import Stats from './Components/Stats/Stats';
 import Navbar from './Components/NavBar/Navbar';
+import { Amplify } from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
