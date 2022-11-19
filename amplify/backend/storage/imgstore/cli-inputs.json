@@ -1,0 +1,14 @@
+{
+  "resourceName": "imgstore",
+  "policyUUID": "b2bfca17",
+  "bucketName": "golfstattracker99f6b27e997d49d096661fb5938a79c1",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
