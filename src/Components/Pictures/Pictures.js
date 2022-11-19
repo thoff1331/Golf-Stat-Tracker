@@ -16,7 +16,7 @@ import {
   createNote as createNoteMutation,
   deleteNote as deleteNoteMutation,
 } from "../../graphql/mutations";
-
+import "./Pictures.css"
 const Pictures = ({ signOut }) => {
   const [notes, setNotes] = useState([]);
 
@@ -73,7 +73,7 @@ const Pictures = ({ signOut }) => {
         <Flex direction="row" justifyContent="center">
           <TextField
             name="name"
-            placeholder="Image Name"
+            placeholder="Course Name"
             label="Note Name"
             labelHidden
             variation="quiet"
@@ -81,11 +81,12 @@ const Pictures = ({ signOut }) => {
           />
           <TextField
             name="description"
-            placeholder="image Description"
+            placeholder="Date"
             label="Note Description"
             labelHidden
             variation="quiet"
             required
+            type='date'
           />
           <View
   name="image"
@@ -98,8 +99,8 @@ const Pictures = ({ signOut }) => {
           </Button>
         </Flex>
       </View>
-      <Heading level={2}>My Uploads</Heading>
-      <View margin="3rem 0">
+      <Heading className='my-uploads' level={2}>My Uploads</Heading>
+      <View margin="3rem 0" className='map-view'>
       {notes.map((note) => (
   <Flex
     key={note.id || note.name}
@@ -107,18 +108,18 @@ const Pictures = ({ signOut }) => {
     justifyContent="center"
     alignItems="center"
   >
-    <Text as="strong" fontWeight={700}>
+    <Text className='text-in-map' as="strong" fontWeight={700}>
       {note.name}
     </Text>
-    <Text as="span">{note.description}</Text>
+    <Text className='text-in-map' as="span">{note.description}</Text>
     {note.image && (
       <Image
         src={note.image}
         alt={`visual aid for ${notes.name}`}
-        style={{ width: 400 }}
+        style={{ width: 200,height:200,margin: 50}}
       />
     )}
-    <Button variation="link" onClick={() => deleteNote(note)}>
+    <Button className='delete-btn' variation="link" onClick={() => deleteNote(note)}>
       Delete Image
     </Button>
   </Flex>

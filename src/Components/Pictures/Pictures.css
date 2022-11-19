@@ -1,0 +1,23 @@
+.App {
+}
+
+.my-uploads {
+ display: flex;
+ justify-content: center;
+ color: #ffdf00;;
+}
+
+.text-in-map {
+color: #ffdf00;;
+width: 90px;
+
+}
+
+.delete-btn {
+  color: #ffdf00;  
+}
+
+.map-view {
+    display: flex;
+    flex-direction: column;
+}

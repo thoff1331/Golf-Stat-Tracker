@@ -1,0 +1,36 @@
+.score-container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    align-items: flex-start;
+}
+
+.round-type-container {
+    display: flex;
+    margin: 5%;
+    background-color: rgb(78, 168, 228);
+    outline: none;
+    border-radius: 5%;
+    height: 80px;
+    width: 80px;
+    font-size: 10px;
+    flex-direction: row;
+}
+
+.round-type-container button {
+    font-size: 16px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+color: #ffdf00;;
+}
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
