@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Score from './Components/Score/Score'
-import Profile from './Components/Profile/Profile';
+import Pictures from './Components/Pictures/Pictures';
 import Stats from './Components/Stats/Stats';
 import Navbar from './Components/NavBar/Navbar';
+import Profile from './Components/Profile/Profile';
 import { Amplify } from 'aws-amplify';
 import config from './aws-exports';
 Amplify.configure(config);
@@ -20,6 +21,7 @@ root.render(
     <Route exact path="/" element={<App />} />
     <Route path="/score" element={<Score />} />
     <Route path="/stats" element={<Stats />} />
+    <Route path="/pictures" element={<Pictures />} />
     <Route path="/profile" element={<Profile />} />
   </Routes>
 </Router>

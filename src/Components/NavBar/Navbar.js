@@ -29,8 +29,13 @@ function Navbar({signOut}) {
         </Link>
       </li>
       <li>
+        <Link className="nav-links" to="/pictures">
+          My Pictures
+        </Link>
+      </li>
+      <li>
         <Link className="nav-links" to="/profile">
-          PROFILE
+        Profile
         </Link>
       </li>
       <Button className='sign-out' onClick={signOut}>Sign Out</Button>
