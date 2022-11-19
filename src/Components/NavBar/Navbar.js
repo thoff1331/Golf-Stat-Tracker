@@ -1,7 +1,16 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
-export default function Navbar() {
+import "@aws-amplify/ui-react/styles.css";
+import {
+  withAuthenticator,
+  Button,
+  Heading,
+  Image,
+  View,
+  Card,
+} from "@aws-amplify/ui-react";
+function Navbar({signOut}) {
   return (
     <div className="nav-items">
       <li>
@@ -24,6 +33,9 @@ export default function Navbar() {
           PROFILE
         </Link>
       </li>
+      <Button className='sign-out' onClick={signOut}>Sign Out</Button>
     </div>
   );
 }
+
+export default withAuthenticator(Navbar)

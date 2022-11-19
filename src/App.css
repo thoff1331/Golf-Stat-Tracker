@@ -1,0 +1,22 @@
+.sign-out {
+    margin-left: 90%;
+    position: absolute;
+    top: 0%;
+    padding: 1rem;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #ffdf00;
+    color: #000000;
+    border-radius: 4px;
+}
+
+.sign-out:hover {
+    color: white;
+    background-color: #42545c;
+    text-decoration: none;
+  }
+  .sign-out .sign-out.active {
+    background-color: black;
+    text-decoration: none;
+  }

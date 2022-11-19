@@ -98,7 +98,6 @@ const Profile = ({ signOut }) => {
           </Flex>
         ))}
       </View>
-      <Button onClick={signOut}>Sign Out</Button>
     </View>
   );
 };
