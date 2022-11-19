@@ -1,4 +1,4 @@
-You can view the hosted app here: 
+You can view the hosted app here: https://master.d15wx30wurrxbk.amplifyapp.com/
 
 Username: Test 
 Password: test1234
