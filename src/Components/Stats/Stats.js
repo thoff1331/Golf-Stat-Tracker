@@ -1,8 +1,13 @@
 import * as React from 'react';
+import {fetchData} from '../../AwsFunctions';
 function Stats() {
+  const fetchDataFormDynamoDb =  async () => {
+    fetchData('golf_rounds')
+  }
+
   return (
     <div>
-    <h1>HOME</h1>
+<button onClick={() => fetchDataFormDynamoDb()}> Fetch </button>
     </div>
   );
 }

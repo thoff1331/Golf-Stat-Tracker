@@ -29,7 +29,7 @@ function Score() {
      <div className='form-container'>
        <h1>{`Playing ${roundType} Holes Today!`}</h1>
        <h1>{TextConstants.playingAt}{" "
-       }{selectedCourse ? selectedCourse : ":" + " " + 'Enter a course'}</h1>
+       }{selectedCourse ? selectedCourse : ' Enter a course'}</h1>
    <div>
      <input className='course-input' value={CourseInput} onChange={(e) => setCourseInput(e.target.value) } placeholder={TextConstants.course}></input>
      <button onClick={() => handleSubmit()}>Submit</button>

@@ -4,11 +4,7 @@ import "./NavBar.css";
 import "@aws-amplify/ui-react/styles.css";
 import {
   withAuthenticator,
-  Button,
-  Heading,
-  Image,
-  View,
-  Card,
+  Button
 } from "@aws-amplify/ui-react";
 function Navbar({signOut}) {
   return (
