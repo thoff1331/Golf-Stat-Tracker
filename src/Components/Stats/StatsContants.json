@@ -1,0 +1,18 @@
+[{
+    "roundTotal": "You have played a total of",
+    "rounds": "rounds.",
+    "tableHeaders": 
+    [
+    "date",
+    "course",
+    "score",
+    "relationToPar",
+    "fwaypercentage",
+    "greenpercentage",
+    "par3ZAvg",
+    "par4Avg",
+    "par5Avg",
+    "Putts",
+    "scramblePercentage"
+    ]
+}]

@@ -10,8 +10,6 @@ function Score() {
   const [selectedCourse,setSelectedCourse] = useState('')
   const buttonText = Array.from(scoreConstants);
   const TextConstants = Array.from(text)[0];
-  console.log(CourseInput)
-  console.log(selectedCourse)
 
    function handleSubmit() {
   setSelectedCourse(CourseInput)
@@ -21,7 +19,7 @@ function Score() {
    <div className='score-container'>
      {buttonText.map((el,index) => {
        return (
-         <div className='round-type-container'>
+         <div key={index} className='round-type-container'>
            <button key={index} onClick={() => setRoundType(el.type) }>{el.text}</button>
            </div>
        )
