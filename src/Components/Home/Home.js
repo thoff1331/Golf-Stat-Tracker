@@ -16,9 +16,9 @@ function Home() {
 
   return (
     <div className='home-container'>
-<button onClick={() => prevImg()} className='image-scroller'>{"<"}  </button>
+<button onClick={() => prevImg()} className='image-scroller' data-testid="button">{"<"}  </button>
 <img src={imgs[imgPage].src}  alt='golf-news' />
-<button onClick={() => nextImg()}  className='image-scroller'> {">"}</button>
+<button  onClick={() => nextImg()}  className='image-scroller'> {">"}</button>
 </div>
   );
 }

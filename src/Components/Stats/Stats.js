@@ -25,10 +25,11 @@ function Stats() {
 useEffect(() => {
   fetchData('golf_rounds');
 },[]);
+console.log(rounds.length)
   return (
     <div>
 <div>
-  <h1>{`${TextConstants.roundTotal} 1 ${TextConstants.rounds}`}</h1>
+  <h1>{`${TextConstants.roundTotal} ${rounds.length} ${TextConstants.rounds}`}</h1>
 </div>
 <div>
   <table>
