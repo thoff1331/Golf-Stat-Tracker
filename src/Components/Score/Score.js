@@ -10,11 +10,6 @@ function Score() {
   const [selectedCourse,setSelectedCourse] = useState('')
   const buttonText = Array.from(scoreConstants);
   const TextConstants = Array.from(text)[0];
-
-   function handleSubmit() {
-  setSelectedCourse(CourseInput)
-  setCourseInput('')  
-  }
   return (
    <div className='score-container'>
      {buttonText.map((el,index) => {
@@ -26,11 +21,7 @@ function Score() {
      })}
      <div className='form-container'>
        <h1>{`Playing ${roundType} Holes Today!`}</h1>
-       <h1>{TextConstants.playingAt}{" "
-       }{selectedCourse ? selectedCourse : ' Enter a course'}</h1>
    <div>
-     <input className='course-input' value={CourseInput} onChange={(e) => setCourseInput(e.target.value) } placeholder={TextConstants.course}></input>
-     <button onClick={() => handleSubmit()}>Submit</button>
    </div>
      </div>
    </div>

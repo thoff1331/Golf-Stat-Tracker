@@ -1,6 +1,9 @@
 [{
     "roundTotal": "You have played a total of",
     "rounds": "rounds.",
+    "9HoleStats" : "See 9 Hole rounds",
+    "18HoleStats": "See 18 Hole rounds",
+    "toggleAveragesButtonText": "Toggle Averages",
     "tableHeaders": 
     [
     "date",

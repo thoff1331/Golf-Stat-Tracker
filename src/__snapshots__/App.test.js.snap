@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should take a snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="home-container"
+  >
+    <button
+      class="image-scroller"
+      data-testid="button"
+    >
+      &lt;  
+    </button>
+    <img
+      alt="golf-news"
+      src="https://igp.brightspotcdn.com/dims4/default/09fd6d9/2147483647/strip/true/crop/1024x498+0+87/resize/1926x936!/quality/90/?url=http%3A%2F%2Findigogolf-brightspot.s3.amazonaws.com%2Fclubs%2Fb0%2F23%2F28e764b24aefa19658bebc5d3b4f%2Fdubsdread.jpg"
+    />
+    <button
+      class="image-scroller"
+    >
+       &gt;
+    </button>
+  </div>
+</DocumentFragment>
+`;
