@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Home.css'
 import {useState} from 'react'
-import * as imgs from './HomeConstants.json'
+import * as imgs from '../../constants/HomeConstants.json'
 
 function Home() {
     const [imgPage,setImgPage] = useState(0)

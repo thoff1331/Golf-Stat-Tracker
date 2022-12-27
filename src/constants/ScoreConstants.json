@@ -3,5 +3,6 @@
     { "text":"Play an 18 hole round",
     "type": 18},
     {"text":"Play a 9 hole round","type": 9 }
+
 ]
 

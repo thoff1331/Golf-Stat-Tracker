@@ -37,3 +37,16 @@ background-color: rgb(236, 233, 233);
     color: #ffdf00;
     text-decoration: black underline;
 }
+#headers{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline black;
+
+}
+#score-stat {
+display: flex;
+align-items: center;
+justify-content: center;
+}

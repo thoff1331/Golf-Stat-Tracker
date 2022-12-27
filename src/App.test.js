@@ -2,7 +2,7 @@ import React from 'react'
 import {screen,render, cleanup} from '@testing-library/react'
 import App from './App'
 import { assert } from 'chai';
-import {nextImg,prev,Img,Home} from "./Components/Home/Home"
+import {nextImg} from "./Components/Home/Home"
 
  afterEach(cleanup)
  

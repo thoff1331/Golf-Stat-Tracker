@@ -1,14 +1,25 @@
 import * as React from 'react';
 import * as AWS from 'aws-sdk'
-import * as StatConstants from "./StatsContants.json"
+import * as StatConstants from "../../constants/StatsContants.json"
 import {useState,useEffect} from 'react'
 import './Stats.css'
+import { headerEnums } from '../../constants/Enums';
 const docClient = new AWS.DynamoDB.DocumentClient()
-
 function Stats() {
   const [rounds,SetRounds] = useState([]);
   const [displayAverages,setDisplayAverages] = useState(false)
   const TextConstants = Array.from(StatConstants)[0];
+  const avgOBJ = {
+    "Score": [],
+    "Plus/Minus": [],
+    "Fairway %": [],
+    "Green %": [],
+    "Par 3 AVG": [],
+    "Par 4 AVG": [],
+    "Par 5 AVG": [],
+    "Putts": [],
+    "Scramble %": []
+  }
  
    const fetchData = (tableName) => {
     var params = {
@@ -21,15 +32,37 @@ function Stats() {
             SetRounds(data.Items)
         }
     })
-   
-}
+  }
 function toggleAverages() {
  setDisplayAverages(displayAverages => !displayAverages) 
 }
+function calculateAverages(column) {
+  let total = []
+  avgOBJ[column].forEach(el => total.push(parseInt(el)))
+  console.log(total)
+  return total.reduce(function (previousValue, currentValue) {
+    return (previousValue + currentValue) / total.length
+});
+}
 useEffect(() => {
   fetchData('golf_rounds');
-},);
-console.log(rounds.length)
+},[]);
+rounds.forEach((el) => {
+  if(el.Score) {
+avgOBJ['Score'] = [...avgOBJ['Score'],el.Score]
+if(el.Putts) {
+  avgOBJ['Putts'] = [...avgOBJ['Putts'],el.Putts]
+  avgOBJ['Fairway %'] = [...avgOBJ['Fairway %'],el['Fairway %']]
+  avgOBJ['Green %'] = [...avgOBJ['Green %'],el['Green %']]
+  avgOBJ['Par 3 AVG'] = [...avgOBJ['Par 3 AVG'],el['Par 3 AVG']]
+  avgOBJ['Par 4 AVG'] = [...avgOBJ['Par 4 AVG'],el['Par 4 AVG']]
+  avgOBJ['Par 5 AVG'] = [...avgOBJ['Par 5 AVG'],el['Par 5 AVG']]
+  avgOBJ['Scramble %'] = [...avgOBJ['Scramble %'],el['Scramble %']]
+  avgOBJ['Plus/Minus'] = [...avgOBJ['Plus/Minus'],el['Plus/Minus']]
+
+}
+  }
+})
   return (
     <div>
 <div>
@@ -44,10 +77,10 @@ console.log(rounds.length)
     <h1 className='averages-header'>Averages</h1>
     <table className='averages-table'>
       <tbody>
-{TextConstants.tableHeaders.map((category,index) => {
+{TextConstants.tableHeaders.filter(el => el !== 'date' && el!== "course" ).map((category,index) => {
   return (
-    <tr className='category' key={index}>{category}
-    <td>76</td>
+    <tr className='category' key={index}>{ headerEnums[category]}
+    <td>{calculateAverages([headerEnums[category]]).toFixed(2)}</td>
     </tr>
   )
 })}
@@ -56,15 +89,16 @@ console.log(rounds.length)
   </div> : null }
   <button className='round-btn'>{TextConstants['9HoleStats']}</button>
 <button className='round-btn'>{TextConstants['18HoleStats']}</button>
+<button className='round-btn'>{TextConstants['clearTable']}</button>
   <table>
     <tbody className='stats-table'>
 {TextConstants.tableHeaders.map((col,index) => {
   return (
     <tr key={index}>
-     <tr>{col}</tr>  
+     <tr id='headers'>{headerEnums[col]}</tr>  
      { rounds[0] ? rounds.map((el,index) => {
        return (
-         <td key={index}>{el[col]}</td>
+         <td id="score-stat" key={index}>{el[headerEnums[col]]}</td>
        )
      }): null}   
      </tr>
